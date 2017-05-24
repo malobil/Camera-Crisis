@@ -44,4 +44,12 @@ public class MyPlayer : MonoBehaviour {
 		facingRight = !facingRight ;
 
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if(other.GetComponent<Object_Application>())
+		{
+			other.GetComponent<Object_Application>().Application() ;
+		}
+	}
 }

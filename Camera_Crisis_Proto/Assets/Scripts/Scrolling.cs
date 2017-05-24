@@ -23,23 +23,32 @@ public Camera cameraFollowPlayer ;
 		VisualWarning() ;
 		if(noScrolling)
 		{
-			cameraFollowPlayer.enabled = true ;
-			cameraWhoScroll.enabled = false ;
+			cameraFollowPlayer.gameObject.SetActive(true) ; //enabled = true ;
+			cameraWhoScroll.gameObject.SetActive(false) ;  //= false ;
+		}
 
+		if(verticalScrolling)
+		{	
+			cameraFollowPlayer.gameObject.SetActive(false) ;
+			horizontalScrolling = false ;
+		}
+
+		if(horizontalScrolling)
+		{
+			cameraFollowPlayer.gameObject.SetActive(false) ;
+			verticalScrolling = false ;
 		}
 	}
 
 	void LateUpdate()
 	{
 		if(verticalScrolling)
-		{
-			horizontalScrolling = false ;
+		{			
 			cameraWhoScroll.transform.position += new Vector3(0,scrollingSpeed,0) ;
 		}
 
 		if(horizontalScrolling)
-		{
-			verticalScrolling = false ;
+		{		
 			cameraWhoScroll.transform.position += new Vector3(scrollingSpeed,0,0) ;	
 		}
 	}

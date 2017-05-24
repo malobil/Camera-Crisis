@@ -46,10 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraScaling.cs" />
-     <Compile Include="Assets\Scripts\Mort.cs" />
+     <Compile Include="Assets\Scripts\GameRulerScripts\Mort.cs" />
+     <Compile Include="Assets\Scripts\GameRulerScripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\MyPlayer.cs" />
      <Compile Include="Assets\Scripts\NextLevelTrigger.cs" />
+     <Compile Include="Assets\Scripts\Scriptable_Object\Object_Application.cs" />
+     <Compile Include="Assets\Scripts\Scriptable_Object\Scriptable_Object_Basic.cs" />
      <Compile Include="Assets\Scripts\Scrolling.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity5.6/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
