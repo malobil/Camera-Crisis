@@ -14,6 +14,7 @@ public GameObject player ;
 		if(playerLife <= 0)
 		{
 			StartCoroutine(RestartLevel()) ;
+			GetComponent<Scrolling>().cameraFollowPlayer.gameObject.transform.parent = null ;
 			Destroy(player) ;
 		}
 	}
